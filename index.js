@@ -5,4 +5,19 @@ document.addEventListener("DOMContentLoaded", function(event) {
     const CANVAS_HEIGHT = canvas.height = 600
 
     const playerImg = new Image()
+
+    playerImg.src = 'img/dog.jpeg'
+
+    let x = 0
+    let y = 0
+
+    function animate() {
+        ctx.clearRect(0,0, CANVAS_WIDTH, CANVAS_HEIGHT)
+        ctx.fillRect(x, y, 100, 100)
+        requestAnimationFrame(animate)
+
+    }
+    
+    animate()
+
 });
